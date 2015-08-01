@@ -18,3 +18,11 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+class Places(models.Model):
+    author = models.ForeignKey('auth.User')
+    title = models.CharField(max_length=200)
+    photo = models.ImageField(upload_to='vitoria')
+    created_date = models.DateTimeField(
+            default=timezone.now)
+    published_date = models.DateTimeField(
+            blank=True, null=True)

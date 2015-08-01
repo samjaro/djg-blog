@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+    {% block content %}
+        {% for place in places %}
+            <div>
+                <h1><a href="{url "vitoria_detail" pk=post.pk %}">{{ place.title }}</h1>
+                <p>{{ place.photo }}</p></a>
+            </div>
+        {% endfor %}                
+           
+    {% endblock content %} 
+
+    
