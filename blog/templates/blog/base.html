@@ -7,11 +7,14 @@
         <link rel="stylesheet" href="{% static "css/blog.css" %}">
         <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </head>
-    <body>
+    <body background="/static/my_app/paper.jpg" opacity="0.4">
         <div class="page-header">
             <a href="{% url "post_new" %}" class="top-menu"><span class="glyphicon-plus"></span></a>
-            <h1><a href="/">Sam's Blog</a></h1>
-            
+            <div class="menu"><h1><a href="/">Sam in Vitoria</a></h1></div>
+            <div class="menu"><h4><a href="{% url "vitoria" %}">Drawings</a></h4></div>
+            <div class="menu"><h4><a href="https://www.facebook.com">Facebook</a></h1></div>
+            <div class="menu"><h4><a href="https://www.linkedin.com/profile/view?id=255726898&trk=hp-identity-name">Linkedin</a></h1></div>
+
         </div>
 
         <div class="content container">
