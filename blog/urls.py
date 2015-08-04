@@ -12,5 +12,10 @@ urlpatterns = [
 
     url(r'^vitoria$', views.vitoria, name='vitoria'),
 
-    url(r'^vitoria/(?P<pk>[0-9]+)/$', views.vitoria_detail, name='vitoria_detail'),
+    #url(r'^vitoria/(?P<pk>[0-9]+)/$', views.vitoria_detail, name='vitoria_detail'),
+
+    url(r'^florida', views.florida, name='florida'),
+
+    url(r'^santa_maria', views.santa_maria, name='santa_maria'),
+    url(r'^cuesta', views.cuesta, name='cuesta'),
 ]

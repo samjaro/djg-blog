@@ -21,7 +21,8 @@ class Post(models.Model):
 class Places(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
-    photo = models.ImageField(upload_to='vitoria')
+
+    photo = models.ImageField(upload_to='vitoria.html')
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(

@@ -47,9 +47,20 @@ def vitoria(request):
 
 
 
-def vitoria_detail(request):
-    place = get_object_or_404(Places, pk=pk)
-    return render(request, 'blog/vitoria_detail.html', {'place': place})
+#def vitoria_detail(request):
+ #   place = get_object_or_404(Places, pk=pk)
+  #  return render(request, 'blog/vitoria_detail.html', {'place': place})
 
+def florida(request):
+    places = Places.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/florida.html', {'places': places})
+
+def santa_maria(request):
+    places = Places.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/santa_maria.html', {'places': places})  
+
+def cuesta(request):
+    places = Places.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/cuesta.html', {'places': places})    
 
     

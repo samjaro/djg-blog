@@ -1,12 +1,27 @@
 {% extends "blog/base.html" %}
-    {% block content %}
-        {% for place in places %}
-            <div>
-                <h1><a href="{url "vitoria_detail" pk=post.pk %}">{{ place.title }}</h1>
-                <p>{{ place.photo }}</p></a>
-            </div>
-        {% endfor %}                
-           
-    {% endblock content %} 
+{% block content %}
+    <table class="tble">
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td><a href="{% url "florida" %}"><img src="http://www.euskoguide.com/images/vitoria/parque-florida-park.jpg"/></td>
+                <td><a href="{% url "florida" %}"><h2>El Parque de Florida</h2></td></a>
+            </tr>
+            <tr>
+                <td><a href="{% url "santa_maria" %}"><img src="http://www.pueblos-espana.org/fotos_originales/4/4/7/00092447.jpg"/></td>
+                <td><a href="{% url "santa_maria" %}"><h2>La plaza de Santa María</h2></td></a>
+            <tr>
+                <td><a href="{% url "cuesta" %}"><img src="http://m1.paperblog.com/i/151/1510316/callejeando-vitoria-gasteiz-ii-capital-verde--L-RBD_Dc.jpeg"/></td>
+                <td><a href="{% url "cuesta" %}"><h2>La cuesta</h2></td></a>                
+               
+            </tr>
+        </tbody>    
 
-    
+{% endblock content %} 
+
+<!--{% for place in places %}
+    <div>
+        <h1><a href="{url "vitoria_detail" pk=post.pk %}">{{ place.title }}</h1>
+        <p>{{ place.photo }}</p></a>
+    </div>
+{% endfor %} -->
