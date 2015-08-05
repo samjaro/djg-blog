@@ -1,7 +1,6 @@
-h1 a {
-    color: #FCA205;
-}
+
 body {
+    background-image: ="/static/my_app/paper.jpg";
     padding-left: 0px;
     background-position: -30px; 
 
@@ -17,14 +16,28 @@ h3 a {
 .page-header {
     background-color: #E9967A;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 5px 5px 5px 5px;
 
 }
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+.page-header h2, .page-header h2 a, .page-header h2 a:visited, .page-header h2 a:active {
     color: #ffffff;
-    font-size: 36pt;
+    font-size: 30pt;
     text-decoration: none;
 }
+
+.page-header a {
+    text-decoration: none;   
+}
+
+.page-header div {
+    display: inline-block;
+    padding: 10px;
+}
+
+.page-header img {
+    width: 100px;
+}
+
 
 .content {
     margin-left: 40px;
@@ -73,31 +86,71 @@ td {
     
 }
 
-.tble {
-    margin: auto;
-    text-align: center;
+.pic_display {
+    margin-left: 100px;
+  
+
 }
 
+.pic_display div {
 
-.tble img {
-    width: 180px;
+    display: inline-block;
+    padding: 10px;
     
 }
 
-.tble a {
-    color: #D2691E;
+
+.pic_display img {
+    width: 200px;
+    opacity: 0.4;
 }
+
+.pic_display img:hover {
+    opacity: 1.0;
+}
+
+.pic_display a {
+    color: #D2691E;
+    text-decoration: none;
+}
+
 .photo img {
     width: 700px;
     margin-left: 100px;
+}
+
+.photo_icon img {
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 0px;
+    opacity: 0.5;
+}
+.photo_icon:hover {
+
+}
+
+tr img {
+    opacity: 0.4;
+}
+
+tr img:hover {
+    opacity: 1.0;
 }
 
 li {
     display: inline;   
 }
 
-.menu {
-    display: inline-block;
-    
-    padding: 10px;
+.home {
+    margin: auto;
+    text-align: center;
+    color: #778899;
+}
+
+.home a {
+    text-decoration: none;
+ }
+
+ .home a:hover {
+    color: black;
 }
