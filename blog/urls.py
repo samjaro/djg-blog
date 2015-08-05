@@ -17,5 +17,7 @@ urlpatterns = [
     url(r'^florida', views.florida, name='florida'),
 
     url(r'^santa_maria', views.santa_maria, name='santa_maria'),
+
     url(r'^cuesta', views.cuesta, name='cuesta'),
+    url(r'^contact', views.contact, name='contact'),
 ]

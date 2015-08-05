@@ -1,6 +1,16 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
+<div class = "home">
+    <ul>
+        <li><a href="/"> <h3>About me</h3></a></li>
+    
+        <li><a href="{% url "contact" %}"><h3>Contact</h3></a></li>
+        <li><a href="{% url "vitoria" %}"><h3>Drawings</h3></a></li>
+    </ul>    
+    
+
+<!--</div>
     {% for post in posts %}
         <div class="post">
             <div class="date">
@@ -9,5 +19,5 @@
                 <h3><a href="{% url "post_detail" pk=post.pk %}">{{ post.title }}</a></h3>
                 <p>{{ post.text|linebreaks }}</p>
         </div>
-    {% endfor %}
+    {% endfor %}-->
 {% endblock content %} 

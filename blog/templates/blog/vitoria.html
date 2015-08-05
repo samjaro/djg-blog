@@ -3,7 +3,22 @@
     <table class="tble">
         <thead></thead>
         <tbody>
-            <tr>
+            <div class="pic_display">
+                <div><a href="{% url "florida" %}"><img src="/static/my_app/florida_draw.jpg" alt="My image"/><h3>El Parque de Florida</h3></a></div> 
+                
+                <div><a href="{% url "santa_maria" %}"><img src="/static/my_app/maria_draw.jpg" alt="Plaza de santa maria"/><h3>La plaza de Santa María</h3></a></div>
+            
+
+                <div><a href="{% url "cuesta" %}"><img src="/static/my_app/cuesta_draw.jpg" alt="La Cuesta"/><h3>La cuesta</h3></a></div>
+            </div>                    
+               
+            
+
+
+
+
+
+            <!--<tr>
                 <td><a href="{% url "florida" %}"><img src="http://www.euskoguide.com/images/vitoria/parque-florida-park.jpg"/></td>
                 <td><a href="{% url "florida" %}"><h2>El Parque de Florida</h2></td></a>
             </tr>
@@ -12,9 +27,9 @@
                 <td><a href="{% url "santa_maria" %}"><h2>La plaza de Santa María</h2></td></a>
             <tr>
                 <td><a href="{% url "cuesta" %}"><img src="http://m1.paperblog.com/i/151/1510316/callejeando-vitoria-gasteiz-ii-capital-verde--L-RBD_Dc.jpeg"/></td>
-                <td><a href="{% url "cuesta" %}"><h2>La cuesta</h2></td></a>                
+                <td><a href="{% url "cuesta" %}"><h2>La cuesta</td></a>                
                
-            </tr>
+            </tr>-->
         </tbody>    
 
 {% endblock content %} 
