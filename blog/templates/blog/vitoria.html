@@ -4,15 +4,55 @@
         <thead></thead>
         <tbody>
             <div class="pic_display">
-                <div><a href="{% url "florida" %}"><img src="/static/my_app/florida_draw.jpg" alt="My image"/><h3>El Parque de Florida</h3></a></div> 
+                <div><a href="{% url "florida" %}">
+                {% for place in places %}
+                {% if place.title == 'Florida' %}
+                <img src="/static/my_app/florida_draw.jpg" alt="My image"/><h3>{{ place.title }}</h3></a></div>
+                {% endif %}
+                {% endfor %}
+
+              
+
+
                 
-                <div><a href="{% url "santa_maria" %}"><img src="/static/my_app/maria_draw.jpg" alt="Plaza de santa maria"/><h3>La plaza de Santa María</h3></a></div>
+                <div><a href="{% url "santa_maria" %}">
+                {% for place in places %}
+                {% if place.title == 'Plaza de santa maria' %}
+                <img src="/static/my_app/maria_draw.jpg" alt="Plaza de santa maria"/><h3>{{ place.title }}</h3></a></div>
+                {% endif %}
+                {% endfor %}
+
+            
             
 
-                <div><a href="{% url "cuesta" %}"><img src="/static/my_app/cuesta_draw.jpg" alt="La Cuesta"/><h3>La cuesta</h3></a></div>
-            </div>                    
-               
+                <div><a href="{% url "cuesta" %}">
+                {% for place in places %}
+                {% if place.title == 'Cuesta' %}
+                <img src="/static/my_app/cuesta_draw.jpg" alt="La Cuesta"/><h3>{{ place.title }}</h3></a></div>
+                {% endif %}
+                {% endfor %}
+
+                
+            </div>      
+
             
+              
+               
+        </tbody>    
+{% endblock content %} 
+
+
+
+            <!--</div>
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+                <h3><a href="{% url "post_detail" pk=post.pk %}">{{ post.title }}</a></h3>
+                <p>{{ post.text|linebreaks }}</p>
+        </div>
+    {% endfor %}-->
 
 
 
@@ -30,9 +70,8 @@
                 <td><a href="{% url "cuesta" %}"><h2>La cuesta</td></a>                
                
             </tr>-->
-        </tbody>    
 
-{% endblock content %} 
+
 
 <!--{% for place in places %}
     <div>

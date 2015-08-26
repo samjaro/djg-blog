@@ -20,4 +20,15 @@ urlpatterns = [
 
     url(r'^cuesta', views.cuesta, name='cuesta'),
     url(r'^contact', views.contact, name='contact'),
+    url(r'^about_me', views.about_me, name='about_me'),
+
+    url(r'^post/(?P<pk>[0-9]+)/publish/$', views.post_publish, name='post_publish'),
+
+
+    url(r'^post/comment/$', views.add_comment_to_post, name='add_comment_to_post'),
+
+    #url(r'^post/(?P<pk>[0-9]+)/comment/$', views.add_comment_to_post, name='add_comment_to_post'),
+
+
+
 ]

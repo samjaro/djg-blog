@@ -1,15 +1,30 @@
 {% extends "blog/base.html" %}
 {% block content %}
-    <div class="photo">
-        <img src="/static/my_app/florida_draw.jpg" alt="My image"/>
-    </div>    
+      
+
+
 
 {% for place in places %}
 {% if place.title == 'Florida' %}
     <div class="post">
         <h1>{{ place.title }}</h1>
+        <div class="photo">
+            <img src="/static/my_app/florida_draw.jpg" alt="My image"/>
 {% endif %}
 {% endfor %}
+            
+        <hr>
+        {% for comment in post.comments.all %}
+            <div class="comment">
+                <div class="date">{{ comment.created_date }}</div>
+                <strong>{{ comment.author }}</strong>
+                <p>{{ comment.text|linebreaks }}</p>
+            </div>
+        {% empty %}
+            <p>No comments here yet :(</p>
+        {% endfor %}    
+    </div>
+
 
 
 {% endblock content %} 
